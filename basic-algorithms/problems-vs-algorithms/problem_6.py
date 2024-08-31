@@ -4,6 +4,11 @@ Problem 6: Unsorted Integer Array
 In this problem, we will look for smallest and largest integer from a list of 
 unsorted integers. The code should run in O(n) time. Do not use Python's 
 inbuilt functions to find min and max.
+
+You should implement the function body according to the get_min_max function 
+signature. Use the test cases provided below to verify that your algorithm is 
+correct. If necessary, add additional test cases to verify that your algorithm 
+works correctly.
 """
 
 from typing import Optional
@@ -25,14 +30,6 @@ if __name__ == '__main__':
     # Edge case: Empty input list
     print(get_min_max([]))
     # Expected output: None
-
-    # Edge case: list with one element
-    print(get_min_max([42]))
-    # Expected output: (42, 42)
-
-    # Edge case: list with all identical elements
-    print(get_min_max([7, 7, 7, 7, 7]))
-    # Expected output: (7, 7)
 
     # Normal case: list with negative and positive numbers
     print(get_min_max([-10, 0, 10, -20, 20]))

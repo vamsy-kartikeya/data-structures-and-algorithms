@@ -1,8 +1,8 @@
 <!--
 Problem 7: Request Routing in a Web Server with a Trie
 
-Provide an explanation for your answer, clearly organizing your 
-thoughts into concise and easy-to-understand language.
+Provide an explanation for your answer, clearly organizing your thoughts into 
+concise and easy-to-understand language.
 
 Focus on explaining the reasoning behind your decisions rather than giving a 
 detailed description of the code. For instance, why did you choose a particular 

@@ -1,8 +1,8 @@
 <!--
 Problem 2: Search in a Rotated Sorted Array
 
-Provide an explanation for your answer, clearly organizing your 
-thoughts into concise and easy-to-understand language.
+Provide an explanation for your answer, clearly organizing your thoughts into 
+concise and easy-to-understand language.
 
 Focus on explaining the reasoning behind your decisions rather than giving a 
 detailed description of the code. For instance, why did you choose a particular 

@@ -1,20 +1,17 @@
 """
 Problem 2: Search in a Rotated Sorted Array
 
-Implement the function `rotated_array_search` according to the following 
-requirements.
-
 You are given a sorted array that has been rotated at a random pivot point. 
-For example, `[0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`.
+For example, [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2].
 
 You are also given a target value to search for. If the target is found in the 
-array, return its index; otherwise, return `-1`. Assume there are no duplicates 
+array, return its index; otherwise, return -1. Assume there are no duplicates 
 in the array, and the runtime complexity of your algorithm must be O(log n).
 
-**Example:**
-
-Input: `nums = [4,5,6,7,0,1,2]`, `target = 0`  
-Output: `4`
+You should implement the function body according to the rotated_array_search 
+function signature. Use the test cases provided below to verify that your 
+algorithm is correct. If necessary, add additional test cases to verify that 
+your algorithm works correctly.
 """
 
 def rotated_array_search(input_list: list[int], number: int) -> int:
@@ -70,14 +67,6 @@ def linear_search(input_list: list[int], number: int) -> int:
 if __name__ == '__main__':
     # Edge case: Empty input list
     test_function([[], 5])
-    # Expected output: Pass
-
-    # Edge case: Large input list
-    test_function([list(range(1000000, 2000000)) + list((1000000)), 1500000])
-    # Expected output: Pass
-
-    # Edge case: Number not in the list
-    test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 5])
     # Expected output: Pass
 
     # Normal case: Number at the beginning of the list

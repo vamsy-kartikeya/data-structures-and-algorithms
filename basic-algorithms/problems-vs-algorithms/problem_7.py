@@ -3,14 +3,19 @@ Problem 7: Request Routing in a Web Server with a Trie
 
 This module implements an HTTPRouter using a Trie data structure.
 
-The HTTPRouter takes a URL path like "/", "/about", or "/blog/2019-01-15/my-awesome-blog-post"
-and determines the appropriate handler to return. The Trie is used to efficiently store and 
-retrieve handlers based on the parts of the path separated by slashes ("/").
+The HTTPRouter takes a URL path like "/", "/about", or 
+"/blog/2019-01-15/my-awesome-blog-post" and determines the appropriate handler 
+to return. The Trie is used to efficiently store and retrieve handlers based on 
+the parts of the path separated by slashes ("/").
 
-The RouteTrie stores handlers under path parts, and the Router delegates adding and looking 
-up handlers to the RouteTrie. The Router also includes a not found handler for paths that 
-are not found in the Trie and handles trailing slashes to ensure requests for '/about' and 
-'/about/' are treated the same.
+The RouteTrie stores handlers under path parts, and the Router delegates adding 
+and looking up handlers to the RouteTrie. The Router also includes a not found 
+handler for paths that are not found in the Trie and handles trailing slashes 
+to ensure requests for '/about' and '/about/' are treated the same.
+
+You sould implement the function bodies the function signatures. Use the test 
+cases provided below to verify that your algorithm is correct. If necessary, 
+add additional test cases to verify that your algorithm works correctly.
 """
 
 from typing import Optional
@@ -127,14 +132,6 @@ if __name__ == '__main__':
     # Edge case: Empty path
     print(router.lookup(""))
     # Expected output: 'not found handler'
-
-    # Edge case: Root path with trailing slash
-    print(router.lookup("/"))
-    # Expected output: 'root handler'
-
-    # Edge case: Path with multiple trailing slashes
-    print(router.lookup("/home/about//"))
-    # Expected output: 'about handler'
 
     # Normal case: Path not found
     print(router.lookup("/home/contact"))

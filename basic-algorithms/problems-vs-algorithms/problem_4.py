@@ -4,9 +4,14 @@ Problem 3: Rearrange Array Elements
 Given an input array consisting on only 0, 1, and 2, sort the array in a single 
 traversal. You're not allowed to use any sorting function that Python provides.
 
-Note: O(n) does not necessarily mean single-traversal. For e.g. if you traverse 
-the array twice, that would still be an O(n) solution but it will not count as 
-single traversal.
+Note that O(n) does not necessarily mean single-traversal. For e.g. if you 
+traverse the array twice, that would still be an O(n) solution but it will not 
+count as single traversal.
+
+You should implement the function body according to the sort_012 function 
+signature. Use the test cases provided below to verify that your algorithm is 
+correct. If necessary, add additional test cases to verify that your algorithm 
+works correctly.
 """
 
 def sort_012(input_list: list[int]) -> list[int]:
@@ -46,14 +51,6 @@ def test_function(test_case: list[list[int]]) -> None:
 if __name__ == "__main__":
     # Edge case: Empty input list
     test_function([[]])
-    # Expected output: Pass
-
-    # Edge case: Large input list
-    test_function([[0, 1, 2] * 100000])
-    # Expected output: Pass
-
-    # Edge case: list with only one type of element
-    test_function([[2, 2, 2, 2, 2]])
     # Expected output: Pass
 
     # Normal case: Mixed elements

@@ -6,12 +6,8 @@ any Python libraries. You should return the floor value of the square root.
 
 Below is a function signature that serves as a starting point for your implementation. 
 Your task is to complete the body of the function. Additionally, some test cases are 
-provided to help you verify the correctness of your implementation. 필요하다면 추가로 test case를 만들어서 테스트해보세요.
-
-For example, if the given number is 16, the function should return 4.
-
-If the given number is 27, the function should return 5, since the square root of 27 
-is approximately 5.196, and its floor value is 5.
+provided to help you verify the correctness of your implementation. If necessary, add 
+test cases to verify that your algorithm is working properly.
 
 The expected time complexity is O(log(n)).
 """
