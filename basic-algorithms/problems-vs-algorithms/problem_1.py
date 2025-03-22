@@ -13,16 +13,18 @@ The expected time complexity is O(log(n)).
 """
 
 def sqrt(number: int) -> int:
-    """
-    Calculate the floored square root of a number
-
-    Args:
-    number(int): Number to find the floored square root
-
-    Returns:
-    int: Floored square root
-    """
-    pass
+    low, high = 0 , number
+    ans = 0
+    while low <= high :
+        mid = (low + high) // 2
+        if mid * mid == number:
+            return mid
+        elif mid * mid < number : 
+            ans = mid
+            low = mid + 1  
+        else :
+            high = mid - 1
+    return ans
 
 if __name__ == "__main__":
     # Test cases

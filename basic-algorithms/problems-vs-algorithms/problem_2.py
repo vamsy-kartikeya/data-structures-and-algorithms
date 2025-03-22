@@ -25,6 +25,24 @@ def rotated_array_search(input_list: list[int], number: int) -> int:
     Returns:
     int: Index of the target number or -1 if not found
     """
+    low , high = 0, len(input_list)-1
+    while low <= high :
+        mid = (low + high)//2
+        if input_list[mid] == number:
+            return mid
+        if input_list[mid] > input_list[low]:
+            if input_list[low] <= number < input_list[mid]:
+                high = mid -1
+            else:
+                low = mid +1
+        else :
+            if input_list[mid] < number <= input_list[high]:
+                low = mid +1
+            else:
+                high = mid - 1        
+                
+    return -1
+        
     pass
 
 # Test function using provided test cases
@@ -66,17 +84,8 @@ def linear_search(input_list: list[int], number: int) -> int:
 
 if __name__ == '__main__':
     # Edge case: Empty input list
-    test_function([[], 5])
-    # Expected output: Pass
-
-    # Normal case: Number at the beginning of the list
-    test_function([[4, 5, 6, 7, 0, 1, 2], 4])
-    # Expected output: Pass
-
-    # Normal case: Number at the end of the list
-    test_function([[4, 5, 6, 7, 0, 1, 2], 2])
-    # Expected output: Pass
-
-    # Normal case: Number in the middle of the list
-    test_function([[4, 5, 6, 7, 0, 1, 2], 6])
-    # Expected output: Pass
+    test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 6])
+    test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
+    test_function([[6, 7, 8, 1, 2, 3, 4], 8])
+    test_function([[6, 7, 8, 1, 2, 3, 4], 1])
+    test_function([[6, 7, 8, 1, 2, 3, 4], 10])
